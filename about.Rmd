@@ -2,7 +2,6 @@
 title: "Academic and Professional Experience"
 ---
 
-
 # Education 
 
 _Master of Science (Biostatistics: Public Health Data Science)_ **Columbia University**

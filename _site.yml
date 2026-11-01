@@ -1,14 +1,16 @@
 name: "Risa Dickerman_website"
 output_dir: "."
 navbar:
-  title: "Risa Dickerman"
+  title: "Home"
   right:
     - text: "Professional Experience"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<ryd2106@cumc.columbia.edu>
-    - icon: fa-github fa-lg
+      href: mailto:ryd2106@cumc.columbia.edu
+    - icon: fa-solid fa-user-tie
       href: http://github.com/risadickerman/
+    - icon: fa-github fa-lg
+      href: https://www.linkedin.com/jobs/
     - text: "Work Sample 1: Visualization 1"
       icon: fa-solid fa-cloud
       href: https://github.com/risadickerman/visualization_1
@@ -19,4 +21,5 @@ navbar:
       icon: fa-solid fa-pen
       href: https://github.com/risadickerman/writing_functions
 output:
-  html_document
+  html_document:
+    theme: darkly
