@@ -1,0 +1,17 @@
+---
+title: "problem_2_plotly"
+author: "Risa Dickerman"
+date: "2026-11-01"
+output: github_document
+---
+
+```{r Libraries}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+```{r}
+noaa = read_csv("~/Downloads/nynoaadat.zip")
+```
+

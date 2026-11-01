@@ -4,6 +4,6 @@ title: "Risa Dickerman"
 
 <img src = "images/profile_pic.jpeg" style="width:60%">
 
-I am a MS Biostatician student at Columbia University. I come from three years in the biotech industry and seek to develop my skills in large data interpretation. With this education and my previous work experience, I hope to contribute to the public health field.
+I am a MS Biostatics student at Columbia University. I come from three years in the biotech industry and seek to develop my skills in large data interpretation. With this education and my previous work experience, I hope to contribute to the public health field.
 
 Name, brief intro (1–3 sentences), what you work on, and clear navigation. Skip the long career-coach summary; engineering reviewers want substance.

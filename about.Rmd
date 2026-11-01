@@ -20,9 +20,8 @@ Blacksburg, VA	| August 2019 - May 2022					   Cumulative GPA: 3.90
 
 # Work Experience
 
-**IFF**
-
-Molecular Biology: Research Associate/ Analyst | Wilmington, DE | December 2024 – June 2026
+**IFF** 
+_Molecular Biology: Research Analyst | Wilmington, DE | December 2024 – June 2026_
 
 ●	Co-led ethanol production scale up research, using JMP and Spotfire to identify competitive strains and quantifying ethanol production.
 
@@ -39,8 +38,7 @@ Molecular Biology: Research Associate/ Analyst | Wilmington, DE | December 2024 
 ●	Communicated results through technical reports, SOP development, and cross-functional presentations, facilitating alignment between research, QC, and production teams.
 
 **Ecovative Design LLC**
-
-Research Associate | Green Island, NY | June 2023 - July 2024
+_Research Associate | Green Island, NY | June 2023 - July 2024_
 
 ●	Analyzed experimental data in R and JMP to evaluate the effects of bioburden, growth temperature, and media composition on fermentation yield.
 
@@ -51,8 +49,7 @@ Research Associate | Green Island, NY | June 2023 - July 2024
 ●	Provided critical support in molecular engineering, including fungal isolation, DNA/RNA extraction, PCR, qPCR, electrophoresis, IVT, NGS, and cell culture.
 
 **CEVA Animal Health**
-
-Process Development Associate | Madison, WI |August 2022 - May 2023
+_Process Dev. Associate | Madison, WI |August 2022 - May 2023_
 
 ●	Led the setup of an upstream and downstream mRNA vaccine production line, focusing on DNA linearization, RNA purification, tangential flow filtration, and LNP association.
 
@@ -71,7 +68,9 @@ Living Materials Lab – FREC Lab – Wright Lab
 ● Conducted molecular biology research involving fermentation, protein extraction, PCR, DNA assembly, cloning, and plant genetics.
 
 
-**Technical Skills** 	
+
+# Technical Skills	
+
 
 ●	Statistical Programming: R, Python, JMP
 
