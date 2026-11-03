@@ -4,7 +4,11 @@ output:
   html_document:
     theme: darkly
 ---
+<div style = "text-align: center;">
 
-<img src = "images/profile_pic.jpeg" style="width:60%">
+<img src = "images/profile_pic.jpeg" 
+style="width:60%; border-radius: 360px;">
 
-I am an MS Biostatistics student at Columbia University with three years of experience in the biotechnology industry. I am developing my skills in large-scale data analysis and hope to combine my quantitative training and previous research experience to contribute to public health.
+<p> I am an MS Biostatistics student at Columbia University with three years of experience in the biotechnology industry. I am developing my skills in large-scale data analysis and hope to combine my quantitative training and previous research experience to contribute to public health. 
+</p>
+</div>

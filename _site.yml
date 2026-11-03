@@ -6,18 +6,23 @@ navbar:
     - text: "Professional Experience"
       href: about.html
     - icon: fa-envelope fa-lg
+      text: "Email"
       href: mailto:ryd2106@cumc.columbia.edu
     - icon: fa-solid fa-user-tie
+      text: "Github"
       href: http://github.com/risadickerman/
     - icon: fa-github fa-lg
-      href: https://www.linkedin.com/jobs/
-    - text: "Work Sample 1: Visualization 1"
-      icon: fa-solid fa-cloud
+      text: "Linkedin"
+      href: https://www.linkedin.com/in/risa-dickerman-383a721a8/
+    - text: "NOAA Dashboard"
+      href: flexdashboard_noaa.html
+    - text: "Work Sample 1"
+      icon: fa-solid fa-pen
       href: https://github.com/risadickerman/visualization_1
-    - text: "Work Sample 2: EDA"
-      icon: fa-solid fa-sun
+    - text: "Work Sample 2"
+      icon: fa-solid fa-pen
       href: https://github.com/risadickerman/viz_and_eda
-    - text: "Work Sample 3: Writing Functions"
+    - text: "Work Sample 3"
       icon: fa-solid fa-pen
       href: https://github.com/risadickerman/writing_functions
 output:
