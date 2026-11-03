@@ -8,10 +8,10 @@ navbar:
     - icon: fa-envelope fa-lg
       text: "Email"
       href: mailto:ryd2106@cumc.columbia.edu
-    - icon: fa-solid fa-user-tie
+    - icon: fa-github fa-lg
       text: "Github"
       href: http://github.com/risadickerman/
-    - icon: fa-github fa-lg
+    - icon: fa-solid fa-user-tie
       text: "Linkedin"
       href: https://www.linkedin.com/in/risa-dickerman-383a721a8/
     - text: "NOAA Dashboard"
