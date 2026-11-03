@@ -12,7 +12,7 @@ navbar:
       text: "Github"
       href: http://github.com/risadickerman/
     - icon: fa-github fa-lg
-      text: "Github"
+      text: "Linkedin"
       href: https://www.linkedin.com/in/risa-dickerman-383a721a8/
     - text: "NOAA Dashboard"
       href: flexdashboard_noaa.html

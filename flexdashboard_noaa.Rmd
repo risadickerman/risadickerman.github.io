@@ -12,38 +12,36 @@ output:
 library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
-library(rvest)
 library(plotly)
 ```
 
 
 ```{r echo = FALSE, message = FALSE}
 noaa = 
-  read_csv("./data/nynoaadat.csv") |> 
+  ny_noaa |> 
   slice_head(n = 5000) |> 
   janitor::clean_names() |> 
   separate(date, into = c("year", "month", "day"), sep = "\\-") |> 
   unite(date, year,month, sep = ".") |> 
   mutate(
     id = as.factor(id),
-    snow = as.integer(snow)
-    ) |> 
+    snow = as.integer(snow),
+    prcp = prcp / 10) |> 
   select(id:snwd, -day) |> 
   filter(!is.na(prcp))
 
 
 noaa_tmin = 
-  read_csv("./data/nynoaadat.csv") |> 
+  ny_noaa |> 
   filter(!is.na(tmin)) |> 
   janitor::clean_names() |> 
   separate(date, into = c("year", "month", "day"), sep = "\\-") |> 
   unite(date, year,month, sep = ".") |> 
   mutate(
-    id = as.factor(id),
-    snow = as.integer(snow)
-    ) |> 
-  select(-day) |> 
-  filter(!is.na(prcp))
+    tmin = as.integer(tmin),
+    tmax = as.integer(tmax),
+    tmin = tmin / 10) |> 
+  select(-day)
 ```
 
 {data-width=650 .tabset}
@@ -56,45 +54,59 @@ noaa |>
   group_by(id, date) |> 
   summarize(
     prcp = mean(prcp),
-    snow = mean(snow)
-  ) |> 
+    snow = mean(snow, na.rm=TRUE)) |> 
   plot_ly(
-    x=~date, y=~prcp, color =~snow, type ="scatter", mode = "markers", colorbar = list(title = list(text = "Snow (mm)"))) |> 
-  layout(title = list(text = 'Average Precipitation vs Snowfall from 2007-2010', y =0.99, x = 0.5), xaxis = list(title="Date (Year.Month)"), yaxis = list(title="Preciptiation (mm)"))
+    x=~date, 
+    y=~prcp, 
+    color =~snow, 
+    type ="scatter", 
+    mode = "markers", 
+    colorbar = list(title = list(text = "Snow (mm)"))) |> 
+  layout(
+    title = list(text = 'Average Precipitation vs Snowfall from 2007-2010', y =0.99, x = 0.5), 
+    xaxis = list(title="Date (Year.Month)"), 
+    yaxis = list(title="Precipitation (mm)"))
 ```
 
 ### Boxplot
 
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
 noaa|> 
-  filter(str_detect(date, "2010")) |> 
+  filter(
+    str_detect(date, "2010")) |> 
   mutate(
     id = as.character(id)) |> 
-  filter( id !="US1NYAB0016") |> 
+  filter( 
+    id !="US1NYAB0016") |> 
   mutate(
     id = as.factor(id)) |> 
   plot_ly(
-    x=~id, y=~prcp, color =~id, type ="box", title = ""
-  ) |> 
-  layout(title = 'Precipitation of Active Weather Stations in 2010', xaxis = list(title="Weather Station"), yaxis = list(title="Preciptiation (mm)"))
+    x=~id, 
+    y=~prcp, 
+    color =~id, 
+    type ="box") |> 
+  layout(
+    title = list(text = 'Precipitation of Active Weather Stations in 2010', y =0.99, x = 0.5), 
+    xaxis = list(title="Weather Station"), 
+    yaxis = list(title="Precipitation (mm)"))
 ```
 
 
-### Histogram2D
+### 2D-Histogram
 
 ```{r echo = FALSE, message = FALSE}
 noaa_tmin |> 
-  mutate(
-    tmin = tmin/100) |> 
   plot_ly(
-    x =~precip,
+    x =~date,
     y =~tmin,
     type = 'histogram2d') |> 
-  layout(title = list(text = "Precipitation vs Minimum Temperature", y = 0.99, x =0.5),
-         xaxis = list(title = "Precipitation (mm)"),
-         yaxis = list(title = "Minimum Temperature (*C)"))
+  layout(
+    title = list(
+      text = "Minimum Temperature Distributions by Month: 1981 to 2010", y = 0.99, x =0.5),
+         xaxis = list(
+           title = "Date (Year.Month)"),
+         yaxis = list(
+           title = "Daily Minimum Temperature (°C)"))
 
 ```
 
-{data-width=350 .tabset}
------------------------------------------------------------------------
